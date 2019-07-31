@@ -1,0 +1,26 @@
+{
+  "name": "tab-panel-amp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "editor-script.js",
+  "scripts": {
+    "start": "wp-scripts start",
+    "build": "wp-scripts build",
+    "watch-css": "node-sass --watch -o src/stylesheets src/stylesheets"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wordpress/scripts": "3.3.0",
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "@wordpress/blocks": "^6.4.0",
+    "@wordpress/components": "^8.0.0",
+    "@wordpress/editor": "^9.4.0",
+    "@wordpress/element": "^2.5.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
