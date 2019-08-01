@@ -1,0 +1,41 @@
+{
+  "name": "dam6pl/whitelabel",
+  "description": "The custom Gutenberg blocks with AMP support.",
+  "type": "plugin",
+  "authors": [
+    {
+      "name": "Damian Nowak",
+      "email": "me@dnowak.dev"
+    }
+  ],
+  "require": {
+    "php": "^7.1.0",
+    "twig/twig": "^2.0"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master",
+    "symfony/var-dumper": "^4.3",
+    "friendsofphp/php-cs-fixer": "^2.15",
+    "phpunit/phpunit": "^8",
+    "brainmaestro/composer-git-hooks": "^2.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "MyCustomBlocks\\": "includes/"
+    }
+  },
+  "extra": {
+    "hooks": {
+      "pre-commit": [
+        "vendor/bin/php-cs-fixer fix --verbose"
+      ],
+      "pre-push": [
+        "phpunit"
+      ]
+    }
+  },
+  "scripts": {
+    "post-install-cmd": "vendor/bin/cghooks add --ignore-lock",
+    "post-update-cmd": "vendor/bin/cghooks update"
+  }
+}

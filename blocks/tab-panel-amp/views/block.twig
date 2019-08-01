@@ -1,0 +1,13 @@
+<amp-selector id="tab-{{ api.hash }}" class="tabs-with-flex" role="tablist">
+    {% for key, tab in api.tabs %}
+        <div id="tab-{{ api.hash }}-{{ tab.hash }}" role="tab"
+             aria-controls="tabpanel-{{ api.hash }}-{{ tab.hash }}"
+             option {{ key == 0 ? 'selected' : '' }}>
+            {{ tab.title }}
+        </div>
+        <div id="tabpanel-{{ api.hash }}-{{ tab.hash }}" role="tabpanel"
+             aria-labelledby="tab-{{ api.hash }}-{{ tab.hash }}">
+            {{ tab.content }}
+        </div>
+    {% endfor %}
+</amp-selector>

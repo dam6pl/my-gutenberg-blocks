@@ -4,9 +4,9 @@
   "description": "",
   "main": "editor-script.js",
   "scripts": {
-    "start": "wp-scripts start",
-    "build": "wp-scripts build",
-    "watch-css": "node-sass --watch -o src/stylesheets src/stylesheets"
+    "start": "wp-scripts start javascript/src/index.js --output-path=javascript/build",
+    "build": "wp-scripts build javascript/src/index.js --output-path=javascript/build",
+    "watch-css": "node-sass --watch -o stylesheets/css stylesheets/scss"
   },
   "author": "",
   "license": "ISC",

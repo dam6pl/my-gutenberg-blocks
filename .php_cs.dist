@@ -1,0 +1,32 @@
+<?php
+
+return PhpCsFixer\Config::create()
+    ->setRiskyAllowed(true)
+    ->setRules(
+        [
+            '@Symfony'                                  => true,
+            '@Symfony:risky'                            => true,
+            '@PHP71Migration'                           => true,
+            '@PHP71Migration:risky'                     => true,
+            '@PhpCsFixer'                               => true,
+            '@PhpCsFixer:risky'                         => true,
+            'array_syntax'                              => ['syntax' => 'short'],
+            'dir_constant'                              => true,
+            'heredoc_to_nowdoc'                         => true,
+            'linebreak_after_opening_tag'               => true,
+            'no_multiline_whitespace_before_semicolons' => true,
+            'phpdoc_add_missing_param_annotation'       => ['only_untyped' => false],
+            'general_phpdoc_annotation_remove'          => ['annotations' => ['author', 'package']],
+            'list_syntax'                               => ['syntax' => 'short'],
+            'phpdoc_types_order'                        => ['null_adjustment' => 'always_last'],
+            'native_function_invocation'                => ['include' => ['@all']],
+            'binary_operator_spaces'                    => ['align_double_arrow' => true, 'align_equals' => true],
+            'concat_space'                              => ['spacing' => 'one'],
+            'cast_spaces'                               => ['space' => 'none'],
+            'no_short_echo_tag'                         => false
+        ]
+    )
+    ->setFinder(
+        PhpCsFixer\Finder::create()
+            ->in(__DIR__ . '/includes')
+    );

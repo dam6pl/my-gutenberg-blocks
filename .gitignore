@@ -1,1 +1,5 @@
 node_modules/
+.php_cs.cache
+cache/
+!cache/.gitkeep
+.DS_Store
