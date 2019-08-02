@@ -42,7 +42,7 @@ class Bootstrap
      */
     public function initBlocks(): void
     {
-        new Blocks();
+        new BlocksManager();
     }
 }
 

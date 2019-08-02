@@ -11,7 +11,7 @@ use MyCustomBlocks\Exception\MissingBlockFileException;
 /**
  * Class Blocks.
  */
-class Blocks
+class BlocksManager
 {
     /**
      * @var array
@@ -99,9 +99,9 @@ class Blocks
             );
         }
 
-        if (!\file_exists("{$path}/javascript/build/index.js")) {
+        if (!\file_exists("{$path}/javascript/build/main.js")) {
             throw new MissingBlockFileException(
-                \__('Missing `/javascript/build/index.js` file in the block', DOMAIN)
+                \__('Missing `/javascript/build/main.js` file in the block', DOMAIN)
             );
         }
 
@@ -131,9 +131,9 @@ class Blocks
 
         \wp_register_script(
             "{$name}-editor-script",
-            "/{$relPath}/javascript/build/index.js",
+            "/{$relPath}/javascript/build/main.js",
             ['wp-blocks', 'wp-element', 'wp-editor', 'lodash'],
-            \filemtime("{$path}/javascript/build/index.js"),
+            \filemtime("{$path}/javascript/build/main.js"),
             true
         );
 
