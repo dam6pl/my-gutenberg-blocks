@@ -124,8 +124,10 @@ class BlocksManager
      * @param string        $name
      * @param string        $path
      * @param AbstractBlock $block
+     *
+     * @return viod
      */
-    private function _registerGutenbergBlock(string $name, string $path, AbstractBlock $block): void
+    private function _registerGutenbergBlock (string $name, string $path, AbstractBlock $block): void
     {
         $relPath = \str_replace(ABSPATH, '', $path);
 
